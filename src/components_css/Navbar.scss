@@ -1,0 +1,63 @@
+
+$base-color: #212731;
+@mixin flexprob{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav{
+    @include flexprob;
+    width: 100%;
+    height: 64px;
+    background-color: $base-color;
+    color: #D1D6DA;
+    font-family: "Inter", sans-serif;
+    div{
+        @include flexprob;
+        gap: 1.6rem; 
+        
+    }
+    .nav_item{
+        cursor: pointer;
+    }
+    .input_box{
+        width: 258px;
+        height: 37px;
+        background-color: #fff;
+        border: 1px;
+        border-radius: 8px;
+        display:flex;
+        align-items: center;
+        justify-content: start; 
+        overflow: hidden;
+        gap: 5px;
+        input{
+            border: none;
+            width: 100%;
+            outline: none;
+        }
+        img{
+            margin-left: 10px;
+        }
+        
+    }
+   
+
+}
+@media only screen and (max-width: 750px){
+    .nav{
+       div{
+        width: 100%;
+        gap: 0;
+        padding: 5px;
+        .nav_item{
+            font-size: 2vw;
+        }
+        .input_box{
+            width: 900px;
+        }
+       }
+    }
+   
+
+}
